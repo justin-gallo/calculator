@@ -29,6 +29,10 @@
     background-color: rgb(240, 240, 240);
     border: 2px solid black;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .buttonsContainer {
@@ -119,4 +123,18 @@
 
 .inputBtn:hover {
     background-color: rgb(190, 155, 211);
+}
+
+.history {
+    font-size: 24px;
+    padding-top: 18px;
+    margin-left: auto;
+    padding-right: 16px;
+}
+
+.currentNumber {
+    font-size: 56px;
+    padding-bottom: 12px;
+    margin-left: auto;
+    padding-right: 16px;
 }
