@@ -84,7 +84,7 @@
     gap: 10px;
 }
 
-.clearBtn {
+.btnClear {
     width: 50%;
     height: 100%;
     margin-right: 5px;
@@ -94,11 +94,11 @@
     font-size: 16px;
 }
 
-.clearBtn:hover { 
+.btnClear:hover { 
     background-color: rgb(237, 224, 166);
 }
 
-.deleteBtn {
+.btnDelete {
     width: 50%;
     height: 100%;
     margin-left: 5px;
@@ -108,7 +108,7 @@
     font-size: 16px;
 }
 
-.deleteBtn:hover {
+.btnDelete:hover {
     background-color: rgb(230, 134, 179);
 }
 
