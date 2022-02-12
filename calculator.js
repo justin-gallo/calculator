@@ -76,6 +76,21 @@ const updateHistory = function (string) {
 
 //Establishing each button on the calculator:
 
+const btnDecimal = document.querySelector('#btnDecimal');
+btnDecimal.addEventListener('click', () => {
+    if (lastOperation === "equals") {
+        historyValue = "";
+        firstValue = "";
+    }
+    if (displayValue.indexOf(".") === -1) {
+        displayValue = displayValue + ".";
+        updateDisplay(displayValue);
+        historyValue = historyValue + ".";
+        updateHistory(historyValue);
+        lastOperation = "number";
+    }
+});
+
 const btn0 = document.querySelector('#btn0');
 btn0.addEventListener('click', () => {
     if (lastOperation === "equals") {
