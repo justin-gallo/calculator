@@ -81,6 +81,7 @@ btnDecimal.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     if (displayValue.indexOf(".") === -1) {
         displayValue = displayValue + ".";
@@ -96,6 +97,7 @@ btn0.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "0";
     updateDisplay(displayValue);
@@ -109,6 +111,7 @@ btn1.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "1";
     updateDisplay(displayValue);
@@ -122,6 +125,7 @@ btn2.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "2";
     updateDisplay(displayValue);
@@ -135,6 +139,7 @@ btn3.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "3";
     updateDisplay(displayValue);
@@ -148,6 +153,7 @@ btn4.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "4";
     updateDisplay(displayValue);
@@ -161,6 +167,7 @@ btn5.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "5";
     updateDisplay(displayValue);
@@ -174,6 +181,7 @@ btn6.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "6";
     updateDisplay(displayValue);
@@ -187,6 +195,7 @@ btn7.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "7";
     updateDisplay(displayValue);
@@ -200,6 +209,7 @@ btn8.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "8";
     updateDisplay(displayValue);
@@ -213,6 +223,7 @@ btn9.addEventListener('click', () => {
     if (lastOperation === "equals") {
         historyValue = "";
         firstValue = "";
+        operator = "";
     }
     displayValue = displayValue + "9";
     updateDisplay(displayValue);
@@ -347,12 +358,13 @@ btnClear.addEventListener('click', () => {
     updateHistory(historyValue);
     firstValue = "";
     lastOperation = "";
+    operator = "";
 });
 
 const btnEquals = document.querySelector('#btnEquals');
 btnEquals.addEventListener('click', () => {
     if (lastOperation === "number") {
-        if (operator === "add" || operator === "subtract" || operator === "multiply" || operator === "divide") {
+        if (operator == "add" || operator == "subtract" || operator == "multiply" || operator == "divide") {
             execute(firstValue, displayValue, operator);
         }
     }
@@ -367,6 +379,7 @@ const execute = function (numA, numB, operator) {
         historyValue = "";
         lastOperation = "";
         firstValue = "";
+        operator = "";
     } else {
         firstValue = result;
         updateDisplay(result);
