@@ -92,10 +92,12 @@
     border-radius: 5px;
     background-color: rgb(247, 234, 176);
     font-size: 16px;
+    color: black;
 }
 
 .btnClear:hover { 
     background-color: rgb(237, 224, 166);
+    color: black;
 }
 
 .btnDelete {
@@ -106,10 +108,12 @@
     border-radius: 5px;
     background-color: rgb(240, 144, 189);
     font-size: 16px;
+    color: black;
 }
 
 .btnDelete:hover {
     background-color: rgb(230, 134, 179);
+    color: black;
 }
 
 .inputBtn {
@@ -119,10 +123,12 @@
     border-radius: 5px;
     background-color: rgb(200, 165, 221);
     font-size: 16px;
+    color: black;
 }
 
 .inputBtn:hover {
     background-color: rgb(190, 155, 211);
+    color: black;
 }
 
 .history {
