@@ -9,5 +9,9 @@ Bugs Fixed:
 Features to Add: 
   1) Keyboard support!
 
+Bugs to squish:
+  1) If lastOperation is empty, then it is still possible to input an operation, which doesn't make sense and can result in an NaN.
+  2) Dividing by zero *should* return "ERROR" (which prevents all button presses until a clear), but currently returns "NaN", which allows button presses (which breaks everything).
+
 Easter Eggs: 
 What's 9 plus 10?
