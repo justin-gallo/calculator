@@ -31,7 +31,11 @@ const divide = function(array) {
     if (result === Infinity) {
         result = "ERROR";
     }
-    return Math.round((result + Number.EPSILON) * 100) / 100; 
+    if (result === "ERROR") {
+        return result;
+    } else {
+        return Math.round((result + Number.EPSILON) * 100) / 100; 
+    }
 }
 
 // Function which takes an operator and an array of values.
@@ -236,7 +240,7 @@ btn9.addEventListener('click', () => {
 
 const btnPlus = document.querySelector('#btnPlus');
 btnPlus.addEventListener('click', () => {
-    if (firstValue === "") {
+    if (firstValue === "" && lastOperation !== "") {
         firstValue = displayValue;
         historyValue = historyValue + " + ";
         operator = "add";
@@ -249,7 +253,7 @@ btnPlus.addEventListener('click', () => {
         updateHistory(historyValue);
         displayValue = "";
         lastOperation = "operation";
-    } else if (lastOperation !== "operation") {
+    } else if (lastOperation !== "operation" && lastOperation !== "") {
         //If not first operator in series, evaluate the first operator before assigning this one. 
         execute(firstValue, displayValue, operator);
         historyValue = historyValue + " + ";
@@ -262,7 +266,7 @@ btnPlus.addEventListener('click', () => {
 
 const btnMinus = document.querySelector('#btnMinus');
 btnMinus.addEventListener('click', () => {
-    if (firstValue === "") {
+    if (firstValue === "" && lastOperation !== "") {
         firstValue = displayValue;
         historyValue = historyValue + " - ";
         operator = "subtract";
@@ -275,7 +279,7 @@ btnMinus.addEventListener('click', () => {
         updateHistory(historyValue);
         displayValue = "";
         lastOperation = "operation";
-    } else if (lastOperation !== "operation") {
+    } else if (lastOperation !== "operation" && lastOperation !== "") {
         //If not first operator in series, evaluate the first operator before assigning this one. 
         execute(firstValue, displayValue, operator);
         historyValue = historyValue + " - ";
@@ -288,7 +292,7 @@ btnMinus.addEventListener('click', () => {
 
 const btnMultiply = document.querySelector('#btnMultiply');
 btnMultiply.addEventListener('click', () => {
-    if (firstValue === "") {
+    if (firstValue === "" && lastOperation !== "") {
         firstValue = displayValue;
         historyValue = historyValue + " × ";
         operator = "multiply";
@@ -301,7 +305,7 @@ btnMultiply.addEventListener('click', () => {
         updateHistory(historyValue);
         displayValue = "";
         lastOperation = "operation";
-    } else if (lastOperation !== "operation") {
+    } else if (lastOperation !== "operation" && lastOperation !== "") {
         //If not first operator in series, evaluate the first operator before assigning this one. 
         execute(firstValue, displayValue, operator);
         historyValue = historyValue + " × ";
@@ -314,7 +318,7 @@ btnMultiply.addEventListener('click', () => {
 
 const btnDivide = document.querySelector('#btnDivide');
 btnDivide.addEventListener('click', () => {
-    if (firstValue === "") {
+    if (firstValue === "" && lastOperation !== "") {
         firstValue = displayValue;
         historyValue = historyValue + " ÷ ";
         operator = "divide";
@@ -327,7 +331,7 @@ btnDivide.addEventListener('click', () => {
         updateHistory(historyValue);
         displayValue = "";
         lastOperation = "operation";
-    } else if (lastOperation !== "operation") {
+    } else if (lastOperation !== "operation" && lastOperation !== "") {
         //If not first operator in series, evaluate the first operator before assigning this one. 
         execute(firstValue, displayValue, operator);
         historyValue = historyValue + " ÷ ";
