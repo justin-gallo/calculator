@@ -1,6 +1,8 @@
 # calculator
 A functional hand-calculator built using Javascript. 
 
+#### [Live Preview](https://justin-gallo.github.io/calculator/)
+
 Bugs Fixed:
   1) Consecutive operations *without* pressing "equals" now evaluate properly. 
   2) It is now impossible to press multiple operation buttons consecutively. Example: 6 + + - 4
